@@ -1,4 +1,4 @@
-<attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-913e9283-76b2-4d37-9b22-63dbdd5d3a69"></attachment><p><br></p><h3>获取客流量统计规则</h3><pre class="ql-syntax" spellcheck="false">NET_DVR_GetDeviceConfig //命令（命令:NET_DVR_GET_PDC_RULECFG_V42）
+<attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-913e9283-76b2-4d37-9b22-63dbdd5d3a69"></attachment><p><br></p><p><br></p><h3>获取客流量统计规则</h3><pre class="ql-syntax" spellcheck="false">NET_DVR_GetDeviceConfig //命令（命令:NET_DVR_GET_PDC_RULECFG_V42）
 boolean  NET_DVR_GetDeviceConfig(int lUserID, int dwCommand,int dwCount, Pointer lpInBuffer, int dwInBufferSize, Pointer lpStatusList,Pointer lpOutBuffer, int dwOutBufferSize);
 
 c参数解释
@@ -12,8 +12,8 @@ c参数解释
   int dwOutBufferSize dwCount个返回结果的总大小
 f返回值
 TRUE表示成功，但不代表每一个配置都成功，哪一个成功，对应查看lpStatusList[n]值；FALSE表示全部失败。接口返回失败请调用NET_DVR_GetLastError获取错误码，通过错误码判断出错原因
-</pre><p><br></p><h3>设置客流量统计规则</h3><pre class="ql-syntax" spellcheck="false">NET_DVR_SetDeviceConfig //(命令:NET_DVR_SET_PDC_RULECFG_V42)
-</pre><p><br></p><p><br></p><h2>注册回调函数，接收设备报警信息</h2><pre class="ql-syntax" spellcheck="false">NET_DVR_SetDVRMessageCallBack_V31 
+</pre><p><br></p><p><br></p><h3>设置客流量统计规则</h3><pre class="ql-syntax" spellcheck="false">NET_DVR_SetDeviceConfig //(命令:NET_DVR_SET_PDC_RULECFG_V42)
+</pre><p><br></p><p><br></p><p><br></p><h2>注册回调函数，接收设备报警信息</h2><pre class="ql-syntax" spellcheck="false">NET_DVR_SetDVRMessageCallBack_V31 
 boolean  NET_DVR_SetDVRMessageCallBack_V31(FMSGCallBack_V31 fMessageCallBack, Pointer pUser);
   fMessageCallBack 回调函数
   pUser 用户数据
@@ -21,7 +21,7 @@ boolean  NET_DVR_SetDVRMessageCallBack_V31(FMSGCallBack_V31 fMessageCallBack, Po
 Return Values
 
 TRUE表示成功，FALSE表示失败。接口返回失败请调用NET_DVR_GetLastError获取错误码，通过错误码判断出错原因。 
-</pre><p><br></p><p><br></p><p>客流量统计结果参数结构体</p><pre class="ql-syntax" spellcheck="false">public static class NET_DVR_PDC_ALRAM_INFO extends Structure { //通道录像参数配置 pAlarmInfo
+</pre><p><br></p><p><br></p><p>客流量统计结果参数结构体</p><p><br></p><pre class="ql-syntax" spellcheck="false">public static class NET_DVR_PDC_ALRAM_INFO extends Structure { //通道录像参数配置 pAlarmInfo
     public int dwSize;//结构体大小
     public byte byMode;  /*0-单帧统计结果，1-最小时间段统计结果*/
 //客流量数据上传有两种不同类型的数据：
@@ -108,4 +108,4 @@ public static class NET_DVR_ALARMER extends Structure
    public    byte[] byRes2 = new byte[11];
 }
 
-</pre><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p>
+</pre><p><br></p><p><br></p><p><br></p><p><br></p><h1>步骤</h1><p>1.</p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p>
