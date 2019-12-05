@@ -24,7 +24,7 @@ TRUE表示成功，FALSE表示失败。接口返回失败请调用NET_DVR_GetLas
 </pre><p><br></p><p><br></p><p>客流量统计结果参数结构体</p><pre class="ql-syntax" spellcheck="false">public static class NET_DVR_PDC_ALRAM_INFO extends Structure { //通道录像参数配置
     public int dwSize;//结构体大小
     public byte byMode;  /*0-单帧统计结果，1-最小时间段统计结果*/
-         public byte byChannel;
+         public byte byChannel;//报警上传通道号
          public byte bySmart;         //专业智能返回0，Smart 返回 1
          public byte byRes1;          // 保留字节
          public NET_VCA_DEV_INFO  struDevInfo = new NET_VCA_DEV_INFO();            //前端设备信息
