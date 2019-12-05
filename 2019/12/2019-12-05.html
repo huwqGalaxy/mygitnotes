@@ -58,5 +58,13 @@ TRUE表示成功，FALSE表示失败。接口返回失败请调用NET_DVR_GetLas
              uStatModeParam.write();
          }
 }
+//前端设备信息
+public static class NET_VCA_DEV_INFO extends Structure
+{
+        public NET_DVR_IPADDR struDevIP;//报警通道对应设备的IP地址
+        public short wPort;
+   public byte byChannel;
+   public byte byIvmsChannel;
+}
 
 </pre><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p>
