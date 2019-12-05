@@ -1,5 +1,8 @@
 <attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-913e9283-76b2-4d37-9b22-63dbdd5d3a69"></attachment><p><br></p><h3>获取客流量统计规则</h3><pre class="ql-syntax" spellcheck="false">NET_DVR_GetDeviceConfig //命令（命令:NET_DVR_GET_PDC_RULECFG_V42）
 boolean  NET_DVR_GetDeviceConfig(int lUserID, int dwCommand,int dwCount, Pointer lpInBuffer, int dwInBufferSize, Pointer lpStatusList,Pointer lpOutBuffer, int dwOutBufferSize);
 
+c参数解释
+  lUserID NET_DVR_Login_V40等登录接口的返回值
+  dwCommand 设备配置命令，参见配置命令
 </pre><p><br></p><h3>设置客流量统计规则</h3><pre class="ql-syntax" spellcheck="false">NET_DVR_SetDeviceConfig //(命令:NET_DVR_SET_PDC_RULECFG_V42)
 </pre><p><br></p><p><br></p><p><br></p>
