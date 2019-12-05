@@ -32,7 +32,7 @@ TRUE表示成功，FALSE表示失败。接口返回失败请调用NET_DVR_GetLas
     public int dwLeaveNum;    /* 离开人数 */
     public int dwEnterNum;    /* 进入人数 */
          public byte byBrokenNetHttp;     //断网续传标志位，0-不是重传数据，1-重传数据
-         public byte byRes3;
+         public byte byRes3;//保留字节
          public short wDevInfoIvmsChannelEx;     //与NET_VCA_DEV_INFO里的byIvmsChannel含义相同，能表示更大的值。老客户端用byIvmsChannel能继续兼容，但是最大到255。新客户端版本请使用wDevInfoIvmsChannelEx
          public int dwPassingNum;        // 经过人数（进入区域后徘徊没有触发进入、离开的人数）
          public byte[] byRes2 = new byte[32];
