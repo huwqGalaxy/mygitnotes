@@ -13,4 +13,5 @@ c参数解释
 f返回值
 TRUE表示成功，但不代表每一个配置都成功，哪一个成功，对应查看lpStatusList[n]值；FALSE表示全部失败。接口返回失败请调用NET_DVR_GetLastError获取错误码，通过错误码判断出错原因
 </pre><p><br></p><h3>设置客流量统计规则</h3><pre class="ql-syntax" spellcheck="false">NET_DVR_SetDeviceConfig //(命令:NET_DVR_SET_PDC_RULECFG_V42)
-</pre><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p>
+</pre><p><br></p><p><br></p><h2>注册回调函数，接收设备报警信息</h2><pre class="ql-syntax" spellcheck="false">NET_DVR_SetDVRMessageCallBack_V31 
+</pre><p><br></p>
