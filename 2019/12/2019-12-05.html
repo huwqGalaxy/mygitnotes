@@ -2,7 +2,7 @@
 boolean  NET_DVR_GetDeviceConfig(int lUserID, int dwCommand,int dwCount, Pointer lpInBuffer, int dwInBufferSize, Pointer lpStatusList,Pointer lpOutBuffer, int dwOutBufferSize);
 
 c参数解释
-  lUserID NET_DVR_Login_V40等登录接口的返回值
+  intlUserID NET_DVR_Login_V40等登录接口的返回值
   dwCommand 设备配置命令，参见配置命令
   dwCount 一次要获取的配置个数，0和1都表示1个监控点信息，2表示2个监控点信息，以此递增，最大64个
   lpInBuffer 配置条件缓冲区指针
