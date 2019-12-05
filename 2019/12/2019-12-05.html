@@ -73,7 +73,17 @@ public static class NET_VCA_DEV_INFO extends Structure
 {
    // public byte[] byLen = new byte[140];
     public NET_DVR_STATFRAME struStatFrame;//结构为实时统计结果参数
-    public NET_DVR_STATTIME  struStatTime;
+    public NET_DVR_STATTIME  struStatTime;//结构为周期统计或者信号量触发结果参数
+}
+public static class NET_DVR_STATFRAME extends Structure { //单帧统计参数
+    public int dwRelativeTime;//统计相对时标
+    public int dwAbsTime;  /*统计绝对时标*/
+         public byte[] byRes = new byte[92];
+}
+public static class NET_DVR_STATTIME extends Structure { //单帧统计参数
+    public NET_DVR_TIME  tmStart;  //统计开始时间
+    public NET_DVR_TIME  tmEnd;    //统计结束时间
+         public byte[] byRes = new byte[92];
 }
 
 </pre><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p>
