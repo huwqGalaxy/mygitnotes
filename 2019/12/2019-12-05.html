@@ -29,7 +29,7 @@ TRUE表示成功，FALSE表示失败。接口返回失败请调用NET_DVR_GetLas
 //2）周期统计结果（byMode为1）：设定统计周期内增加的数量，更新频率即为设定的统计周期（默认15分钟，最小1分钟，最大60分钟）。
          public byte byChannel;//报警上传通道号
          public byte bySmart;         //专业智能返回0，Smart 返回 1
-         public byte byRes1;          // 保留字节
+     
          public NET_VCA_DEV_INFO  struDevInfo = new NET_VCA_DEV_INFO();            //前端设备信息
          public UNION_PDC_STATPARAM uStatModeParam = new UNION_PDC_STATPARAM();
     public int dwLeaveNum;    /* 离开人数 */
