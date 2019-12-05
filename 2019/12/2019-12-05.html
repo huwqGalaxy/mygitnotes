@@ -21,7 +21,7 @@ boolean  NET_DVR_SetDVRMessageCallBack_V31(FMSGCallBack_V31 fMessageCallBack, Po
 Return Values
 
 TRUE表示成功，FALSE表示失败。接口返回失败请调用NET_DVR_GetLastError获取错误码，通过错误码判断出错原因。 
-</pre><p><br></p><p><br></p><p>客流量统计结果参数结构体</p><pre class="ql-syntax" spellcheck="false">public static class NET_DVR_PDC_ALRAM_INFO extends Structure { //通道录像参数配置
+</pre><p><br></p><p><br></p><p>客流量统计结果参数结构体</p><pre class="ql-syntax" spellcheck="false">public static class NET_DVR_PDC_ALRAM_INFO extends Structure { //通道录像参数配置 pAlarmInfo
     public int dwSize;//结构体大小
     public byte byMode;  /*0-单帧统计结果，1-最小时间段统计结果*/
 //客流量数据上传有两种不同类型的数据：
@@ -85,7 +85,7 @@ public static class NET_DVR_STATTIME extends Structure { //单帧统计参数
     public NET_DVR_TIME  tmEnd;    //统计结束时间
          public byte[] byRes = new byte[92];
 }
-//报警设备信息
+//报警设备信息 pAlarmer
 public static class NET_DVR_ALARMER extends Structure
 {
    public  byte byUserIDValid;                 /* userid是否有效 0-无效，1-有效 */
