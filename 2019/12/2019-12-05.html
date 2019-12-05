@@ -24,6 +24,9 @@ TRUE表示成功，FALSE表示失败。接口返回失败请调用NET_DVR_GetLas
 </pre><p><br></p><p><br></p><p>客流量统计结果参数结构体</p><pre class="ql-syntax" spellcheck="false">public static class NET_DVR_PDC_ALRAM_INFO extends Structure { //通道录像参数配置
     public int dwSize;//结构体大小
     public byte byMode;  /*0-单帧统计结果，1-最小时间段统计结果*/
+//客流量数据上传有两种不同类型的数据：
+//1）实时统计结果（byMode为0）：自上次清零动作（包括设备重启、手动清零或每天零点自动清零）后开始计算的实时数量，计数发生变化时上传。
+//2）周期统计结果（byMode为1）：设定统计周期内增加的数量，更新频率即为设定的统计周期（默认15分钟，最小1分钟，最大60分钟）。
          public byte byChannel;//报警上传通道号
          public byte bySmart;         //专业智能返回0，Smart 返回 1
          public byte byRes1;          // 保留字节
