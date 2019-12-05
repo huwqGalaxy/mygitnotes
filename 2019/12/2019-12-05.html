@@ -63,7 +63,7 @@ public static class NET_VCA_DEV_INFO extends Structure
 {
         public NET_DVR_IPADDR struDevIP;//报警通道对应设备的IP地址
         public short wPort;//报警通道对应设备的端口号
-   public byte byChannel;
+   public byte byChannel;//报警通道对应设备的通道号，参数值即表示通道号。比如，byChannel=1，表示通道1。
    public byte byIvmsChannel;
 }
 
